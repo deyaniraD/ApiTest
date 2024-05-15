@@ -16,8 +16,8 @@ public class RealizarPedidoStepDef {
         realizarpedido.setURL(url);
     }
 
-    @When("creo el pedido con id {int}, petId {int}, quantity {int}, shipDate {string}, status {string}")
-    public void creoElPedidoConIdPetIdQuantityShipDateStatusComplete(int id, int petId, int quantity, String shipDate, String status) {
+    @When("creo el pedido con id {string}, petId {string}, quantity {string}, shipDate {string}, status {string}")
+    public void creoElPedidoConIdPetIdQuantityShipDateStatusComplete(String id, String petId, String quantity, String shipDate, String status) {
         realizarpedido.creoElPedidoConIdPetIdQuantityShipDateStatusComplete(id,petId,quantity,shipDate,status);
     }
 

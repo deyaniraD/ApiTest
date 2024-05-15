@@ -1,5 +1,6 @@
 package com.nttdata.step;
 
+import net.serenitybdd.core.environment.EnvironmentSpecificConfiguration;
 import net.serenitybdd.rest.SerenityRest;
 import org.junit.Assert;
 
@@ -17,7 +18,7 @@ public class RealizarPedidoMasStep {
         Assert.assertEquals(statusCode, lastResponse().getStatusCode());
     }
 
-    public void creoElPedidoConIdPetIdQuantityShipDateStatusComplete(int id, int petId, int quantity, String shipDate, String status) {
+    public void creoElPedidoConIdPetIdQuantityShipDateStatusComplete(String id, String petId, String quantity, String shipDate, String status) {
         SerenityRest.given()
                 .contentType("application/json")
                 .relaxedHTTPSValidation()
